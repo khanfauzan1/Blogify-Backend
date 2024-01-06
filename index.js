@@ -26,7 +26,7 @@ const connectDB = async () => {
 dotenv.config();
 app.use(express.json());
 connectDB();
-app.use("/images", express.static(path.join(__dirname, "/images")));
+
 app.use(cors({ origin: "https://blog-fauzan.vercel.app",methods:["POST","GET","PUT","DELETE"], credentials: true }));
 app.use(cookieParser());
 app.use("/api/auth", authRoute);
@@ -52,6 +52,9 @@ app.use("/api/comments", commentRoute);
 //   res.status(200).json("Image has been uploaded successfully ");
 // });
 //
+app.get("/",(req,res)=>{
+  res.send("hello");
+}
 port=process.env.PORT|| 5000
 app.listen(port, () => {
   
