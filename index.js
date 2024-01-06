@@ -27,7 +27,7 @@ dotenv.config();
 app.use(express.json());
 connectDB();
 
-app.use(cors({ origin: "https://blog-fauzan.vercel.app",methods:["POST","GET","PUT","DELETE"], credentials: true }));
+app.use(cors({ origin: "https://blogify-fauzan.vercel.app",methods:["POST","GET","PUT","DELETE"], credentials: true }));
 app.use(cookieParser());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
