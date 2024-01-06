@@ -54,7 +54,7 @@ app.use("/api/comments", commentRoute);
 //
 app.get("/",(req,res)=>{
   res.send("hello");
-}
+})
 port=process.env.PORT|| 5000
 app.listen(port, () => {
   
